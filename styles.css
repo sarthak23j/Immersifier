@@ -1,0 +1,415 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+:root{
+    --clr--maintext:#8cfacc;
+    --clr--finch:#30008a;
+    
+    --bshade1: #5316cc;
+    --bshade2: #5631ca;
+    --bshade3: #593dc8;
+    --bshade4: #5c49c6;
+    --bshade5: #5f55c4;
+    --bshade6: #6261c2;
+    --bshade7: #656dc0;
+    --bshade8: #6879be;
+    --bshade9: #6b85bc;
+    --bshade10: #6e91ba;
+    --bshade11: #719dba;
+    --bshade12: #74a9b8;
+    --bshade13: #77b5b6;
+    --bshade14: #7ac1b4;
+    --bshade15: #7dceb2;
+    --bshade16: #80dab0;
+    --bshade17: #83e6ae;
+    --bshade18: #86f2ac;
+    --bshade19: #89ffa9;
+    --bshade20: #8cfaa7;
+    --timeperiod:100s;
+}
+
+body{
+    color:var(--clr--maintext);
+    font-family: Helvetica;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+  
+  body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/back2.jpg");
+    background-repeat: no-repeat;
+    background-size:fill;
+    background-position: top;
+    animation: pan 300s infinite ease-in-out;
+    z-index: -2;
+  }
+
+header{
+    position:relative;
+    height:20vh;
+    z-index: 3;
+}
+
+.finch > svg {
+    stroke:var(--clr--finch);
+}
+
+.finch{
+    position: absolute;
+    right:5%;
+    top:0%;
+}
+
+main{
+    position:relative;
+    height:70vh;
+    z-index: 3;
+}
+
+.base{
+    position:absolute;
+    left: 7.5vw;
+    bottom:10%;
+
+    height:0.4rem;
+    width: 85vw;
+
+    background-color:var(--clr--maintext);
+    opacity: 0.15;
+    border-radius: 0.2rem;
+}
+
+.center{
+    position:absolute;
+    left:50vw;
+    bottom:9.5%;
+
+    height:1rem;
+    width: 1rem;
+
+    background-color:var(--clr--maintext);
+    opacity: 0.9;
+    border-radius: 0.5rem;
+}
+
+.midring{
+    border:0.3rem dashed var(--clr--base);
+    
+    position:absolute;
+    left:calc(50vw - 1.5rem);
+    bottom:calc(9.5% - 1.5rem);
+
+    height:4rem;
+    width: 4rem;
+
+    opacity: 0.9;
+    border-radius: 2rem;
+
+}
+
+.ball{
+    position:absolute;
+
+    height:1rem;
+    width: 1rem;
+
+    border-radius: 0.5rem;
+}
+
+.n1{
+    background-color:var(--bshade1);
+    left:-40vw;
+}
+
+.n2{
+    background-color:var(--bshade2);
+    left:-38vw;
+}
+
+.n3{
+    background-color:var(--bshade3);
+    left:-36vw;
+}
+
+.n4{
+    background-color:var(--bshade4);
+    left:-34vw;
+}
+
+.n5{
+    background-color:var(--bshade5);
+    left:-32vw;
+}
+
+.n6{
+    background-color:var(--bshade6);
+    left:-30vw;
+}
+
+.n7{
+    background-color:var(--bshade7);
+    left:-28vw;
+}
+
+.n8{
+    background-color:var(--bshade8);
+    left:-26vw;
+}
+
+.n9{
+    background-color:var(--bshade9);
+    left:-24vw;
+}
+
+.n10{
+    background-color:var(--bshade10);
+    left:-22vw;
+}
+
+.n11{
+    background-color:var(--bshade11);
+    left:-20vw;
+}
+
+.n12{
+    background-color:var(--bshade12);
+    left:-18vw;
+}
+
+.n13{
+    background-color:var(--bshade13);
+    left:-16vw;
+}
+
+.n14{
+    background-color:var(--bshade14);
+    left:-14vw;
+}
+
+.n15{
+    background-color:var(--bshade15);
+    left:-12vw;
+}
+
+.n16{
+    background-color:var(--bshade16);
+    left:-10vw;
+}
+
+.n17{
+    background-color:var(--bshade17);
+    left:-8vw;
+}
+
+.n18{
+    background-color:var(--bshade18);
+    left:-6vw;
+}
+
+.n19{
+    background-color:var(--bshade19);
+    left:-4vw;
+}
+
+.n20{
+    background-color:var(--bshade20);
+    left:-2vw;
+}
+
+.b1{
+    animation: twist calc(var(--timeperiod)/17) infinite linear;
+}
+
+.b2{
+    animation: twist calc(var(--timeperiod)/18) infinite linear;
+}
+
+.b3{
+    animation: twist calc(var(--timeperiod)/19) infinite linear;
+}
+
+.b4{
+    animation: twist calc(var(--timeperiod)/20) infinite linear;
+}
+
+.b5{
+    animation: twist calc(var(--timeperiod)/21) infinite linear;
+}
+
+.b6{
+    animation: twist calc(var(--timeperiod)/22) infinite linear;
+}
+
+.b7{
+    animation: twist calc(var(--timeperiod)/23) infinite linear;
+}
+
+.b8{
+    animation: twist calc(var(--timeperiod)/24) infinite linear;
+}
+
+.b9{
+    animation: twist calc(var(--timeperiod)/25) infinite linear;
+}
+
+.b10{
+    animation: twist calc(var(--timeperiod)/26) infinite linear;
+}
+
+.b11{
+    animation: twist calc(var(--timeperiod)/27) infinite linear;
+}
+
+.b12{
+    animation: twist calc(var(--timeperiod)/28) infinite linear;
+}
+
+.b13{
+    animation: twist calc(var(--timeperiod)/29) infinite linear;
+}
+
+.b14{
+    animation: twist calc(var(--timeperiod)/30) infinite linear;
+}
+
+.b15{
+    animation: twist calc(var(--timeperiod)/31) infinite linear;
+}
+
+.b16{
+    animation: twist calc(var(--timeperiod)/32) infinite linear;
+}
+
+.b17{
+    animation: twist calc(var(--timeperiod)/33) infinite linear;
+}
+
+.b18{
+    animation: twist calc(var(--timeperiod)/34) infinite linear;
+}
+
+.b19{
+    animation: twist calc(var(--timeperiod)/35) infinite linear;
+}
+
+.b20{
+    animation: twist calc(var(--timeperiod)/36) infinite linear;
+}
+
+
+.arrow{
+    position:absolute;
+    height:8rem;
+    width:8rem;
+
+    bottom:49%;
+
+    opacity:0.3;
+}
+
+.l{
+    left:6rem;
+    transform:rotateZ(-45deg)
+}
+
+.r{
+    right:6rem;
+    transform:rotateZ(135deg)
+}
+
+.a1{
+    position:absolute;
+    background:var(--clr--maintext);
+    height:50%;
+    width:7%;
+    transform: rotateZ(10deg) translateY(6px);
+}
+
+.a2{
+    position:absolute;
+    background:var(--clr--maintext);
+    height:7%;
+    width:50%;
+    transform: rotateZ(-10deg) translateX(6px);
+}
+
+.arrow:hover{
+    animation: fadein 0.3s forwards ease-in-out;
+}
+
+.arrow:not(:hover){
+    animation:fadeout 0.3s forwards ease-in-out;
+}
+
+@keyframes fadein {
+    0%{
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes fadeout {
+    0%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0.3;
+    }
+}
+
+@keyframes twist {
+    0%{
+
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform:rotateZ(0deg);
+    }
+}
+
+@keyframes pan {
+    0%{
+        background-position: center;
+    }
+    20%{
+        background-position: left;
+    }
+    40%{
+        background-position: top;
+    }
+    60%{
+        background-position: right;
+    }
+    80%{
+        background-position: bottom;
+    }
+    100%{
+        background-position: center;
+    }
+    
+}
+
