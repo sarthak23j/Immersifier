@@ -4,6 +4,8 @@
 
 :root{
     --clr--maintext:#8cfacc;
+    --clr--alttext:#6e91ba33;
+    --clr--alttextfull:#6e91ba;
     --clr--finch:#30008a;
     
     --bshade1: #5316cc;
@@ -316,67 +318,58 @@ main{
     animation: twist calc(var(--timeperiod)/36) infinite linear;
 }
 
+footer{
+    position:relative;
+    height:10vh;
+    z-index: 3;
+}
 
-.arrow{
+.slider{
     position:absolute;
-    height:8rem;
-    width:8rem;
+    left: 7.5vw;
+    top:0%;
 
-    bottom:49%;
+    height:0.4rem;
+    width: 85vw;
 
-    opacity:0.3;
+    background-color:var(--clr--alttext);
+    border-radius: 0.2rem;
 }
 
-.l{
-    left:6rem;
-    transform:rotateZ(-45deg)
+.slide-button{
+    position: absolute;
+    
+    left:50%;
+    top:-50%;
+
+    height:1rem;
+    width: 1rem;
+
+    background-color:var(--clr--alttextfull);
+
+    border-radius: 0.5rem;
 }
 
-.r{
-    right:6rem;
-    transform:rotateZ(135deg)
-}
+.slide-button::before{
+    content: "(";
 
-.a1{
     position:absolute;
-    background:var(--clr--maintext);
-    height:50%;
-    width:7%;
-    transform: rotateZ(10deg) translateY(6px);
+    left:-45vw;
+    bottom: -100%;
+
+    font-size: 3rem;
+    color:var(--clr--alttextfull);
 }
 
-.a2{
+.slide-button::after{
+    content: ")";
+
     position:absolute;
-    background:var(--clr--maintext);
-    height:7%;
-    width:50%;
-    transform: rotateZ(-10deg) translateX(6px);
-}
+    right:-43.5vw;
+    bottom: -100%;
 
-.arrow:hover{
-    animation: fadein 0.3s forwards ease-in-out;
-}
-
-.arrow:not(:hover){
-    animation:fadeout 0.3s forwards ease-in-out;
-}
-
-@keyframes fadein {
-    0%{
-    }
-    100%{
-        opacity:1;
-    }
-}
-
-@keyframes fadeout {
-    0%{
-        opacity:1;
-    }
-
-    100%{
-        opacity:0.3;
-    }
+    font-size: 3rem;
+    color:var(--clr--alttextfull);
 }
 
 @keyframes twist {
