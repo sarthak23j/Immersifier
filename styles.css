@@ -337,7 +337,7 @@ footer{
 }
 
 .slider::before{
-    content: "(";
+    content: "<";
     
     position:absolute;
     left:-5vw;
@@ -348,7 +348,7 @@ footer{
 }
 
 .slider::after{
-    content: ")";
+    content: ">";
     
     position:absolute;
     right:-5vw;
