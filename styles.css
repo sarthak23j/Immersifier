@@ -4,7 +4,7 @@
 
 :root{
     --clr--maintext:#8cfacc;
-    --clr--alttext:#886ebapyu33;
+    --clr--alttext:#886eba33;
     --clr--alttextfull:#886eba;
     --clr--finch:#30008a;
     
@@ -326,7 +326,7 @@ footer{
 
 .slider{
     position:absolute;
-    left: 7.5svw;
+    left: 7.5vw;
     top:0%;
 
     height:0.4rem;
