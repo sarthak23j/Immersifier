@@ -4,8 +4,8 @@
 
 :root{
     --clr--maintext:#8cfacc;
-    --clr--alttext:#6e91ba33;
-    --clr--alttextfull:#6e91ba;
+    --clr--alttext:#886eba33;
+    --clr--alttextfull:#886eba;
     --clr--finch:#30008a;
     
     --bshade1: #5316cc;
@@ -28,7 +28,7 @@
     --bshade18: #86f2ac;
     --bshade19: #89ffa9;
     --bshade20: #8cfaa7;
-    --timeperiod:100s;
+    --timeperiod:129s;
 }
 
 body{
@@ -326,7 +326,7 @@ footer{
 
 .slider{
     position:absolute;
-    left: 7.5vw;
+    left: 7.5svw;
     top:0%;
 
     height:0.4rem;
@@ -334,6 +334,28 @@ footer{
 
     background-color:var(--clr--alttext);
     border-radius: 0.2rem;
+}
+
+.slider::before{
+    content: "(";
+    
+    position:absolute;
+    left:-5vw;
+    bottom: -350%;
+
+    font-size: 3rem;
+    color:var(--clr--alttextfull);
+}
+
+.slider::after{
+    content: ")";
+    
+    position:absolute;
+    right:-5vw;
+    bottom: -350%;
+    
+    font-size: 3rem;
+    color:var(--clr--alttextfull);
 }
 
 .slide-button{
@@ -348,28 +370,6 @@ footer{
     background-color:var(--clr--alttextfull);
 
     border-radius: 0.5rem;
-}
-
-.slide-button::before{
-    content: "(";
-
-    position:absolute;
-    left:-45vw;
-    bottom: -100%;
-
-    font-size: 3rem;
-    color:var(--clr--alttextfull);
-}
-
-.slide-button::after{
-    content: ")";
-
-    position:absolute;
-    right:-43.5vw;
-    bottom: -100%;
-
-    font-size: 3rem;
-    color:var(--clr--alttextfull);
 }
 
 @keyframes twist {
